@@ -1,0 +1,6 @@
+framework module HHTextFieldView {
+  umbrella header "HHTextFieldView-umbrella.h"
+
+  export *
+  module * { export * }
+}

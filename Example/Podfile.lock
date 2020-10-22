@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - HHTextFieldView (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - HHTextFieldView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  HHTextFieldView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  HHTextFieldView: 30fabb51584fb1f980cb298285ba0694ff2b68bf
+
+PODFILE CHECKSUM: cae757c2b2a7db96f3a8821a312a6dea986a83cd
+
+COCOAPODS: 1.10.0
