@@ -7,6 +7,7 @@
 //
 
 #import "HHViewController.h"
+#import <HHTextFieldView/HHTextFieldView.h>
 
 @interface HHViewController ()
 
@@ -17,7 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    HHTextFieldView *view = [[HHTextFieldView alloc] init];
+    view.rightType = HHTextFieldRightTypeArrow;
+    view.leftTitle = @"111";
+    view.leftViewWidth = 100;
+    [self.view addSubview:view];
+    
+    view.backgroundColor = [UIColor redColor];
+    view.frame = CGRectMake(0, 100, 300, 50);
 }
 
 - (void)didReceiveMemoryWarning

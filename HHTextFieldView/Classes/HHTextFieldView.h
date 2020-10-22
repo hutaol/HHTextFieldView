@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HHPictureCodeView.h"
+@class HHTextFieldView;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,21 +16,28 @@ typedef NS_ENUM(NSInteger, HHTextFieldRightType) {
     HHTextFieldRightTypeNone,
     HHTextFieldRightTypePictureCode,        // 图形码
     HHTextFieldRightTypeVerificationCode,   // 验证码
+    HHTextFieldRightTypeArrow,              // 箭头
 };
 
 typedef void(^HHVerificationCodeViewCallBack)(void);
-
+typedef void(^HHTextFieldViewClickCallBack)(HHTextFieldView *view);
 
 @interface HHTextFieldView : UIView
 
 @property (nonatomic, strong) UITextField *textField;
 
 @property (nonatomic, copy) NSString *leftTitle;
+@property (nonatomic, strong) UIColor *leftTitleColor;
+@property (nonatomic, strong) UIFont *leftTitleFont;
+
 @property (nonatomic, assign) CGFloat leftViewWidth;
 
 @property (nonatomic, assign) BOOL showUnderLine;
 
 @property (nonatomic, assign) HHTextFieldRightType rightType;
+
+// 设置这个点击后 textField就不可编辑
+@property (nonatomic, copy) HHTextFieldViewClickCallBack onClickCallback;
 
 @property (nonatomic, copy) HHPictureCodeViewCallBack pictureCodeViewCallBack;
 

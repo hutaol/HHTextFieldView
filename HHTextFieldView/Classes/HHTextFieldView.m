@@ -41,6 +41,22 @@
 
 }
 
+- (void)setLeftTitleColor:(UIColor *)leftTitleColor {
+    if (_leftTitleColor == leftTitleColor) {
+        return;
+    }
+    _leftTitleColor = leftTitleColor;
+    self.leftLabel.textColor = leftTitleColor;
+}
+
+- (void)setLeftTitleFont:(UIFont *)leftTitleFont {
+    if (_leftTitleFont == leftTitleFont) {
+        return;
+    }
+    _leftTitleFont = leftTitleFont;
+    self.leftLabel.font = leftTitleFont;
+}
+
 - (void)setLeftViewWidth:(CGFloat)leftViewWidth {
     if (_leftViewWidth == leftViewWidth) {
         return;
@@ -81,13 +97,57 @@
             [self addSubview:self.countDownButton];
         }
             break;
-            
+        case HHTextFieldRightTypeArrow:
+        {
+            // 箭头
+            NSString *path = [self getResourcePath:@"right_arrow"];
+            UIImage *image = [UIImage imageWithContentsOfFile:path];
+
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+            self.textField.rightView = imageView;
+            self.textField.rightViewMode = UITextFieldViewModeAlways;
+        }
+            break;
         default:
             break;
     }
     
     [self setNeedsLayout];
     
+}
+
+- (NSBundle *)getResourceBundle:(NSString *)bundleName {
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSURL *bundleURL = [bundle URLForResource:bundleName withExtension:@"bundle"];
+    NSBundle *resourceBundle = [NSBundle bundleWithURL:bundleURL];
+    if (!resourceBundle) {
+        NSString * bundlePath = [bundle.resourcePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.bundle", bundleName]];
+        resourceBundle = [NSBundle bundleWithPath:bundlePath];
+    }
+    return resourceBundle ?: bundle;
+}
+
+- (NSString *)getResourcePath:(NSString *)name {
+    return [[[self getResourceBundle:@"HHTextFieldView"] resourcePath] stringByAppendingPathComponent:name];
+}
+
+- (void)setOnClickCallback:(HHTextFieldViewClickCallBack)onClickCallback {
+    if (_onClickCallback == onClickCallback) {
+        return;
+    }
+    _onClickCallback = onClickCallback;
+    if (onClickCallback) {
+        self.textField.enabled = NO;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+        [tap addTarget:self action:@selector(onClick:)];
+        [self addGestureRecognizer:tap];
+    }
+}
+
+- (void)onClick:(UITapGestureRecognizer *)sender {
+    if (self.onClickCallback) {
+        self.onClickCallback(self);
+    }
 }
 
 #pragma mark - layout
