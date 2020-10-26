@@ -193,22 +193,58 @@
 - (void)onClickCountDown:(HHCountDownButton *)sender {
     
     if (self.verificationCodeViewCallBack) {
-        self.verificationCodeViewCallBack();
+        self.verificationCodeViewCallBack(self);
+    }
+
+}
+
+- (void)startCountDown {
+    [self startCountDown:0];
+}
+
+- (void)startCountDown:(NSInteger)secound {
+    
+    if (secound <= 0) {
+        secound = 60;
     }
     
-    sender.enabled = NO;
+    self.countDownButton.enabled = NO;
+    self.countDownEnable = NO;
+    
     //button type要 设置成custom 否则会闪动
-    [sender startCountDownWithSecond:10];
+    [self.countDownButton startCountDownWithSecond:secound];
 
-    [sender countDownChanging:^NSString * _Nullable(HHCountDownButton * _Nonnull countDownButton, NSUInteger second) {
+    [self.countDownButton countDownChanging:^NSString * _Nullable(HHCountDownButton * _Nonnull countDownButton, NSUInteger second) {
         NSString *title = [NSString stringWithFormat:@"剩余%zd秒", second];
         return title;
     }];
-    [sender countDownFinished:^NSString * _Nullable(HHCountDownButton * _Nonnull countDownButton, NSUInteger second) {
+    [self.countDownButton countDownFinished:^NSString * _Nullable(HHCountDownButton * _Nonnull countDownButton, NSUInteger second) {
         countDownButton.enabled = YES;
-        return @"获取验证码";
+        self.countDownEnable = YES;
+        return self.countDownTitle?:@"获取验证码";
     }];
+}
 
+- (void)setCountDownEnable:(BOOL)countDownEnable {
+    _countDownEnable = countDownEnable;
+    if (countDownEnable) {
+        self.countDownButton.backgroundColor = self.countDownBackgroundColor ?: [UIColor redColor];
+    } else {
+        self.countDownButton.backgroundColor = self.unable_countDownBackgroundColor ?: [UIColor redColor];
+    }
+}
+
+- (void)setCountDownBackgroundColor:(UIColor *)countDownBackgroundColor {
+    _countDownBackgroundColor = countDownBackgroundColor;
+}
+
+- (void)setUnable_countDownBackgroundColor:(UIColor *)unable_countDownBackgroundColor {
+    _unable_countDownBackgroundColor = unable_countDownBackgroundColor;
+}
+
+- (void)setCountDownTitle:(NSString *)countDownTitle {
+    _countDownTitle = countDownTitle;
+    [self.countDownButton setTitle:countDownTitle?:@"获取验证码" forState:UIControlStateNormal];
 }
 
 #pragma mark -

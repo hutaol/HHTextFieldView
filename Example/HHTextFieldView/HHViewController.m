@@ -19,13 +19,18 @@
 {
     [super viewDidLoad];
     HHTextFieldView *view = [[HHTextFieldView alloc] init];
-    view.rightType = HHTextFieldRightTypeArrow;
-    view.leftTitle = @"111";
-    view.leftViewWidth = 100;
+    view.rightType = HHTextFieldRightTypeVerificationCode;
+    view.textField.text = @"验证码";
     [self.view addSubview:view];
-    
-    view.backgroundColor = [UIColor redColor];
+    view.showUnderLine = YES;
+    view.backgroundColor = [UIColor whiteColor];
     view.frame = CGRectMake(0, 100, 300, 50);
+    view.verificationCodeViewCallBack = ^(HHTextFieldView * _Nonnull view) {
+        [view startCountDown];
+    };
+    view.countDownBackgroundColor = [UIColor blueColor];
+    view.unable_countDownBackgroundColor = [UIColor yellowColor];
+    view.countDownEnable = YES;
 }
 
 - (void)didReceiveMemoryWarning
