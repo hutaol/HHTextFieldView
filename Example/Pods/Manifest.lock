@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - HHTextFieldView (0.1.0)
+  - HHTextFieldView (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  HHTextFieldView: 0920817c92b903afb8829ddb24afbdb449e7e75f
+  HHTextFieldView: c7961a40d2e11948a8a8b72a3262860ec8bcc967
 
 PODFILE CHECKSUM: cae757c2b2a7db96f3a8821a312a6dea986a83cd
 
