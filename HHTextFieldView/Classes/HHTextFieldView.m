@@ -225,6 +225,10 @@
     }];
 }
 
+- (void)stopCountDown {
+    [self.countDownButton stopCountDown];
+}
+
 - (void)setCountDownEnable:(BOOL)countDownEnable {
     _countDownEnable = countDownEnable;
     if (countDownEnable) {

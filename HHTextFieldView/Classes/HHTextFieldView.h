@@ -64,6 +64,7 @@ typedef void(^HHTextFieldViewClickCallBack)(HHTextFieldView *view);
 // 默认60s
 - (void)startCountDown;
 - (void)startCountDown:(NSInteger)secound;
+- (void)stopCountDown;
 
 @end
 
