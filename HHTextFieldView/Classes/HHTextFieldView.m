@@ -26,9 +26,21 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:self.textField];
+        [self setupUI];
     }
     return self;
+}
+
+- (instancetype)initWithType:(HHTextFieldRightType *)type {
+    self = [super init];
+    if (self) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (void)setupUI {
+    [self addSubview:self.textField];
 }
 
 - (void)setLeftTitle:(NSString *)leftTitle {

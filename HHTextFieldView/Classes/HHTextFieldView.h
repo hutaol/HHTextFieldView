@@ -47,6 +47,10 @@ typedef void(^HHTextFieldViewClickCallBack)(HHTextFieldView *view);
 @property (nonatomic, assign) BOOL countDownEnable;
 @property (nonatomic, copy) NSString *countDownTitle;
 
+/// 初始化
+- (instancetype)initWithType:(HHTextFieldRightType *)type;
+
+
 @end
 
 
