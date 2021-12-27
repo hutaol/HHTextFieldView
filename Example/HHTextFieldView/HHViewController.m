@@ -24,13 +24,34 @@
     [self.view addSubview:view];
     view.showUnderLine = YES;
     view.backgroundColor = [UIColor whiteColor];
-    view.frame = CGRectMake(0, 100, 300, 50);
+    view.frame = CGRectMake(20, 100, 300, 50);
     view.verificationCodeViewCallBack = ^(HHTextFieldView * _Nonnull view) {
         [view startCountDown];
     };
     view.countDownBackgroundColor = [UIColor blueColor];
     view.unable_countDownBackgroundColor = [UIColor yellowColor];
     view.countDownEnable = YES;
+    
+    [self addSecureUI];
+    [self addArrayUI];
+}
+
+- (void)addSecureUI {
+    HHTextFieldView *view = [[HHTextFieldView alloc] init];
+    view.rightType = HHTextFieldRightTypeSecure;
+    view.textFieldHorizontalMargin = 16;
+    [self.view addSubview:view];
+    view.backgroundColor = [UIColor grayColor];
+    view.frame = CGRectMake(20, 200, 300, 50);
+}
+
+- (void)addArrayUI {
+    HHTextFieldView *view = [[HHTextFieldView alloc] init];
+    view.rightType = HHTextFieldRightTypeArrow;
+    view.textFieldHorizontalMargin = 16;
+    [self.view addSubview:view];
+    view.backgroundColor = [UIColor grayColor];
+    view.frame = CGRectMake(20, 300, 300, 50);
 }
 
 - (void)didReceiveMemoryWarning

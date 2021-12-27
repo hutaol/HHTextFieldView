@@ -18,6 +18,8 @@
 @property (nonatomic, strong) HHPictureCodeView *picCodeView;
 @property (nonatomic, strong) HHCountDownButton *countDownButton;
 
+@property (nonatomic, strong) UIButton *secureButton;
+
 @end
 
 @implementation HHTextFieldView
@@ -26,21 +28,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setupUI];
+        [self addSubview:self.textField];
     }
     return self;
-}
-
-- (instancetype)initWithType:(HHTextFieldRightType *)type {
-    self = [super init];
-    if (self) {
-        [self setupUI];
-    }
-    return self;
-}
-
-- (void)setupUI {
-    [self addSubview:self.textField];
 }
 
 - (void)setLeftTitle:(NSString *)leftTitle {
@@ -74,6 +64,14 @@
         return;
     }
     _leftViewWidth = leftViewWidth;
+    [self setNeedsLayout];
+}
+
+- (void)setTextFieldHorizontalMargin:(CGFloat)textFieldHorizontalMargin {
+    if (_textFieldHorizontalMargin == textFieldHorizontalMargin) {
+        return;
+    }
+    _textFieldHorizontalMargin = textFieldHorizontalMargin;
     [self setNeedsLayout];
 }
 
@@ -120,12 +118,29 @@
             self.textField.rightViewMode = UITextFieldViewModeAlways;
         }
             break;
+        case HHTextFieldRightTypeSecure:
+        {
+            // 安全密码
+//            self.textField.rightView = self.secureButton;
+//            self.textField.rightViewMode = UITextFieldViewModeAlways;
+            self.textField.secureTextEntry = YES;
+            [self addSubview:self.secureButton];
+        }
+            break;
         default:
             break;
     }
     
     [self setNeedsLayout];
     
+}
+
+- (UIImage *)imageWithSecureOpen {
+    return self.secureOpenImage ?: [UIImage imageWithContentsOfFile:[self getResourcePath:@"secure_open"]];
+}
+
+- (UIImage *)imageWithSecureClose {
+    return self.secureCloseImage ?: [UIImage imageWithContentsOfFile:[self getResourcePath:@"secure_close"]];
 }
 
 - (NSBundle *)getResourceBundle:(NSString *)bundleName {
@@ -162,12 +177,25 @@
     }
 }
 
+/// 点击安全密码
+- (void)onClickSecure:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    self.textField.secureTextEntry = !sender.selected;
+    
+    if (sender.selected) {
+        [sender setImage:[self imageWithSecureOpen] forState:UIControlStateNormal];
+    } else {
+        [sender setImage:[self imageWithSecureClose] forState:UIControlStateNormal];
+    }
+}
+
 #pragma mark - layout
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     
     CGFloat rightWidth = 100;
+    CGFloat rightMargin = 10;
     
     BOOL showLeft = NO;
     BOOL showRight = NO;
@@ -184,6 +212,11 @@
         self.countDownButton.frame = CGRectMake(self.frame.size.width - rightWidth, 10, rightWidth, self.frame.size.height-10);
         showRight = YES;
 
+    } else if (self.rightType == HHTextFieldRightTypeSecure) {
+        rightMargin = 0;
+        rightWidth = self.frame.size.height;
+        self.secureButton.frame = CGRectMake(self.frame.size.width - rightWidth, 0, self.frame.size.height, self.frame.size.height);
+        showRight = YES;
     }
     
     CGRect frame = self.bounds;
@@ -192,13 +225,16 @@
         frame.size.width -= self.leftViewWidth;
     }
     if (showRight) {
-        frame.size.width = frame.size.width - rightWidth - 10;
+        frame.size.width = frame.size.width - rightWidth - rightMargin;
     }
     
+    frame.origin.x += self.textFieldHorizontalMargin;
+    frame.size.width -= self.textFieldHorizontalMargin * 2;
+
     self.textField.frame = frame;
 
     if (self.showUnderLine) {
-        self.underLineView.frame = CGRectMake(0, frame.size.height-0.5, showLeft ? frame.size.width + self.leftViewWidth : frame.size.width , 0.5);
+        self.underLineView.frame = CGRectMake(0, frame.size.height - 0.5, showLeft ? frame.size.width + self.leftViewWidth : frame.size.width , 0.5);
     }
 }
 
@@ -263,6 +299,20 @@
     [self.countDownButton setTitle:countDownTitle?:@"获取验证码" forState:UIControlStateNormal];
 }
 
+- (void)setSecureOpenImage:(UIImage *)secureOpenImage {
+    _secureOpenImage = secureOpenImage;
+    if (self.rightType == HHTextFieldRightTypeSecure && self.secureButton.selected == YES) {
+        [self.secureButton setImage:[self imageWithSecureOpen] forState:UIControlStateNormal];
+    }
+}
+
+- (void)setSecureCloseImage:(UIImage *)secureCloseImage {
+    _secureCloseImage = secureCloseImage;
+    if (self.rightType == HHTextFieldRightTypeSecure && self.secureButton.selected == NO) {
+        [self.secureButton setImage:[self imageWithSecureClose] forState:UIControlStateNormal];
+    }
+}
+
 #pragma mark -
 
 - (void)setPictureCode:(UIImage *)image {
@@ -313,6 +363,15 @@
         [_countDownButton addTarget:self action:@selector(onClickCountDown:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _countDownButton;
+}
+
+- (UIButton *)secureButton {
+    if (!_secureButton) {
+        _secureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_secureButton setImage:[self imageWithSecureClose] forState:UIControlStateNormal];
+        [_secureButton addTarget:self action:@selector(onClickSecure:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _secureButton;
 }
 
 @end
