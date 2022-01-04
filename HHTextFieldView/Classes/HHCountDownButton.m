@@ -21,35 +21,36 @@
     
     NSTimer *_timer;
     NSDate *_startDate;
-    
-    CountDownChanging _countDownChanging;
-    CountDownFinished _countDownFinished;
-    TouchedCountDownButtonHandler _touchedCountDownButtonHandler;
 }
+
 @end
 
 @implementation HHCountDownButton
+
 #pragma -mark touche action
-- (void)countDownButtonHandler:(TouchedCountDownButtonHandler)touchedCountDownButtonHandler{
-    _touchedCountDownButtonHandler = [touchedCountDownButtonHandler copy];
-    [self addTarget:self action:@selector(touched:) forControlEvents:UIControlEventTouchUpInside];
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self addTarget:self action:@selector(touched:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return self;
 }
 
 - (void)touched:(HHCountDownButton*)sender{
-    if (_touchedCountDownButtonHandler) {
+    if (self.touchedCountDownButtonHandler) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            _touchedCountDownButtonHandler(sender,sender.tag);
+            self.touchedCountDownButtonHandler(sender, sender.tag);
         });
     }
 }
 
 #pragma -mark count down method
-- (void)startCountDownWithSecond:(NSUInteger)totalSecond
-{
+- (void)startCountDownWithSecond:(NSUInteger)totalSecond {
     _totalSecond = totalSecond;
     _second = totalSecond;
    
-    
     __weak typeof(self) weakSelf = self;
     _timer = [NSTimer jkcd_scheduledTimerWithTimeInterval:1.0 block:^{
          typeof(weakSelf) strongSelf = weakSelf;
@@ -58,85 +59,57 @@
     
     _startDate = [NSDate date];
     _timer.fireDate = [NSDate distantPast];
-    [[NSRunLoop currentRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
+
 - (void)timerStart {
      double deltaTime = [[NSDate date] timeIntervalSinceDate:_startDate];
     
-     _second = _totalSecond - (NSInteger)(deltaTime+0.5) ;
-
+    _second = _totalSecond - (NSInteger)(deltaTime+0.5) ;
     
-    if (_second< 0.0)
-    {
+    if (_second <= 0.0) {
         [self stopCountDown];
-    }
-    else
-    {
-        if (_countDownChanging)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *title = _countDownChanging(self,_second);
-                [self setTitle:title forState:UIControlStateNormal];
-                [self setTitle:title forState:UIControlStateDisabled];
-            });
-        }
-        else
-        {
-            NSString *title = [NSString stringWithFormat:@"%zd秒",_second];
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *title = [NSString stringWithFormat:@"%@%zd%@", self.beingTitlePrefix, self->_second, self.beingTitleSuffix];
             [self setTitle:title forState:UIControlStateNormal];
             [self setTitle:title forState:UIControlStateDisabled];
-
-        }
-    }
-}
-
-- (void)stopCountDown{
-    if (_timer) {
-        if ([_timer respondsToSelector:@selector(isValid)])
-        {
-            if ([_timer isValid])
-            {
-                [_timer invalidate];
-                _second = _totalSecond;
-                if (_countDownFinished)
-                {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        NSString *title = _countDownFinished(self,_totalSecond);
-                        [self setTitle:title forState:UIControlStateNormal];
-                        [self setTitle:title forState:UIControlStateDisabled];
-                    });
-                }
-                else
-                {
-                    [self setTitle:@"重新获取" forState:UIControlStateNormal];
-                    [self setTitle:@"重新获取" forState:UIControlStateDisabled];
-
-                }
+            if (self.countDownChanging) {
+                self.countDownChanging(self, self->_second);
             }
-        }
+        });
     }
 }
-#pragma -mark block
-- (void)countDownChanging:(CountDownChanging)countDownChanging{
-    _countDownChanging = [countDownChanging copy];
+
+- (void)stopCountDown {
+    if (_timer && [_timer respondsToSelector:@selector(isValid)] && [_timer isValid]) {
+        [_timer invalidate];
+        _second = _totalSecond;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setTitle:self.title forState:UIControlStateNormal];
+            [self setTitle:self.title forState:UIControlStateDisabled];
+            if (self.countDownFinished) {
+                self.countDownFinished(self, self->_second);
+            }
+        });
+    }
 }
-- (void)countDownFinished:(CountDownFinished)countDownFinished{
-    _countDownFinished = [countDownFinished copy];
-}
+
 @end
 
 
 @implementation NSTimer (JKCountDownBlocksSupport)
+
 + (NSTimer *)jkcd_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
                                            block:(void(^)(void))block
-                                         repeats:(BOOL)repeats
-{
+                                         repeats:(BOOL)repeats {
     return [self scheduledTimerWithTimeInterval:interval
                                          target:self
                                        selector:@selector(jkcd_blockInvoke:)
                                        userInfo:[block copy]
                                         repeats:repeats];
 }
+
 + (void)jkcd_blockInvoke:(NSTimer *)timer {
     void (^block)(void) = timer.userInfo;
     if(block) {

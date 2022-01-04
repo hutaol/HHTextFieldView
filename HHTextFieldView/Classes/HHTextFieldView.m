@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) UIButton *secureButton;
 
+@property (nonatomic, assign) BOOL countDownBeing;
+
 @end
 
 @implementation HHTextFieldView
@@ -28,111 +30,21 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:self.textField];
+        [self initialize];
     }
     return self;
 }
 
-- (void)setLeftTitle:(NSString *)leftTitle {
-    if (_leftTitle == leftTitle) {
-        return;
+- (instancetype)initWithRightType:(HHTextFieldRightType)rightType {
+    self = [super init];
+    if (self) {
+        self.rightType = rightType;
     }
-    _leftTitle = leftTitle;
-    self.leftLabel.text = leftTitle;
-    [self addSubview:self.leftLabel];
-
+    return self;
 }
 
-- (void)setLeftTitleColor:(UIColor *)leftTitleColor {
-    if (_leftTitleColor == leftTitleColor) {
-        return;
-    }
-    _leftTitleColor = leftTitleColor;
-    self.leftLabel.textColor = leftTitleColor;
-}
-
-- (void)setLeftTitleFont:(UIFont *)leftTitleFont {
-    if (_leftTitleFont == leftTitleFont) {
-        return;
-    }
-    _leftTitleFont = leftTitleFont;
-    self.leftLabel.font = leftTitleFont;
-}
-
-- (void)setLeftViewWidth:(CGFloat)leftViewWidth {
-    if (_leftViewWidth == leftViewWidth) {
-        return;
-    }
-    _leftViewWidth = leftViewWidth;
-    [self setNeedsLayout];
-}
-
-- (void)setTextFieldHorizontalMargin:(CGFloat)textFieldHorizontalMargin {
-    if (_textFieldHorizontalMargin == textFieldHorizontalMargin) {
-        return;
-    }
-    _textFieldHorizontalMargin = textFieldHorizontalMargin;
-    [self setNeedsLayout];
-}
-
-- (void)setShowUnderLine:(BOOL)showUnderLine {
-    if (_showUnderLine == showUnderLine) {
-        return;
-    }
-    _showUnderLine = showUnderLine;
-    if (showUnderLine) {
-        [self addSubview:self.underLineView];
-        [self setNeedsLayout];
-    } else {
-        [self.underLineView removeFromSuperview];
-    }
-}
-
-- (void)setRightType:(HHTextFieldRightType)rightType {
-    if (_rightType == rightType) {
-        return;
-    }
-    _rightType = rightType;
-    
-    switch (rightType) {
-        case HHTextFieldRightTypePictureCode:
-        {
-            // 图形
-            [self addSubview:self.picCodeView];
-        }
-            break;
-        case HHTextFieldRightTypeVerificationCode:
-        {
-            // 验证码
-            [self addSubview:self.countDownButton];
-        }
-            break;
-        case HHTextFieldRightTypeArrow:
-        {
-            // 箭头
-            NSString *path = [self getResourcePath:@"right_arrow"];
-            UIImage *image = [UIImage imageWithContentsOfFile:path];
-
-            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-            self.textField.rightView = imageView;
-            self.textField.rightViewMode = UITextFieldViewModeAlways;
-        }
-            break;
-        case HHTextFieldRightTypeSecure:
-        {
-            // 安全密码
-//            self.textField.rightView = self.secureButton;
-//            self.textField.rightViewMode = UITextFieldViewModeAlways;
-            self.textField.secureTextEntry = YES;
-            [self addSubview:self.secureButton];
-        }
-            break;
-        default:
-            break;
-    }
-    
-    [self setNeedsLayout];
-    
+- (void)initialize {
+    [self addSubview:self.textField];
 }
 
 - (UIImage *)imageWithSecureOpen {
@@ -177,39 +89,49 @@
     }
 }
 
-/// 点击安全密码
-- (void)onClickSecure:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    self.textField.secureTextEntry = !sender.selected;
-    
-    if (sender.selected) {
-        [sender setImage:[self imageWithSecureOpen] forState:UIControlStateNormal];
-    } else {
-        [sender setImage:[self imageWithSecureClose] forState:UIControlStateNormal];
-    }
-}
+
 
 #pragma mark - layout
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat rightWidth = 100;
+    // 100
+    CGFloat rightWidth = self.rightViewWidth;
     CGFloat rightMargin = 10;
     
     BOOL showLeft = NO;
     BOOL showRight = NO;
     if (self.leftTitle.length > 0 && self.leftViewWidth > 0) {
         showLeft = YES;
-        self.leftLabel.frame = CGRectMake(0, 0, self.leftViewWidth, self.frame.size.height);
+        self.leftLabel.frame = CGRectMake(self.edgeInsets.left, self.edgeInsets.top, self.leftViewWidth, self.frame.size.height - self.edgeInsets.top - self.edgeInsets.bottom);
     }
     
     if (self.rightType == HHTextFieldRightTypePictureCode) {
-        self.picCodeView.frame = CGRectMake(self.frame.size.width - rightWidth, 10, rightWidth, self.frame.size.height-10);
+        
+        if (rightWidth <= 0) {
+            rightWidth = 100;
+        }
+        
+        if (self.showUnderLine) {
+            self.picCodeView.frame = CGRectMake(self.frame.size.width - rightWidth - self.edgeInsets.right, 10 + self.edgeInsets.top, rightWidth, self.frame.size.height-10 - self.edgeInsets.top - self.edgeInsets.bottom);
+        } else {
+            self.picCodeView.frame = CGRectMake(self.frame.size.width - rightWidth - self.edgeInsets.right, self.edgeInsets.top, rightWidth, self.frame.size.height - self.edgeInsets.top - self.edgeInsets.bottom);
+        }
         showRight = YES;
         
     } else if (self.rightType == HHTextFieldRightTypeVerificationCode) {
-        self.countDownButton.frame = CGRectMake(self.frame.size.width - rightWidth, 10, rightWidth, self.frame.size.height-10);
+        
+        if (rightWidth <= 0) {
+            [self.countDownButton sizeToFit];
+            rightWidth = self.countDownButton.frame.size.width + 10;
+        }
+        
+        if (self.showUnderLine) {
+            self.countDownButton.frame = CGRectMake(self.frame.size.width - rightWidth - self.edgeInsets.right, 10 + self.edgeInsets.top, rightWidth, self.frame.size.height-10 - self.edgeInsets.top - self.edgeInsets.bottom);
+        } else {
+            self.countDownButton.frame = CGRectMake(self.frame.size.width - rightWidth - self.edgeInsets.right, self.edgeInsets.top, rightWidth, self.frame.size.height - self.edgeInsets.top - self.edgeInsets.bottom);
+        }
         showRight = YES;
 
     } else if (self.rightType == HHTextFieldRightTypeSecure) {
@@ -228,8 +150,8 @@
         frame.size.width = frame.size.width - rightWidth - rightMargin;
     }
     
-    frame.origin.x += self.textFieldHorizontalMargin;
-    frame.size.width -= self.textFieldHorizontalMargin * 2;
+    frame.origin.x += self.textFieldInsets.left + self.edgeInsets.left;
+    frame.size.width -= (self.textFieldInsets.left + self.textFieldInsets.right + self.edgeInsets.left + self.edgeInsets.right);
 
     self.textField.frame = frame;
 
@@ -238,67 +160,125 @@
     }
 }
 
-- (void)onClickCountDown:(HHCountDownButton *)sender {
-    
-    if (self.verificationCodeViewCallBack) {
-        self.verificationCodeViewCallBack(self);
+#pragma mark - Setter
+
+- (void)setLeftTitle:(NSString *)leftTitle {
+    if (_leftTitle == leftTitle) {
+        return;
     }
+    _leftTitle = leftTitle;
+    self.leftLabel.text = leftTitle;
+    [self addSubview:self.leftLabel];
 
 }
 
-- (void)startCountDown {
-    [self startCountDown:0];
-}
-
-- (void)startCountDown:(NSInteger)secound {
-    
-    if (secound <= 0) {
-        secound = 60;
+- (void)setLeftTitleColor:(UIColor *)leftTitleColor {
+    if (_leftTitleColor == leftTitleColor) {
+        return;
     }
-    
-    self.countDownButton.enabled = NO;
-    self.countDownEnable = NO;
-    
-    //button type要 设置成custom 否则会闪动
-    [self.countDownButton startCountDownWithSecond:secound];
-
-    [self.countDownButton countDownChanging:^NSString * _Nullable(HHCountDownButton * _Nonnull countDownButton, NSUInteger second) {
-        NSString *title = [NSString stringWithFormat:@"剩余%zd秒", second];
-        return title;
-    }];
-    [self.countDownButton countDownFinished:^NSString * _Nullable(HHCountDownButton * _Nonnull countDownButton, NSUInteger second) {
-        countDownButton.enabled = YES;
-        self.countDownEnable = YES;
-        return self.countDownTitle?:@"获取验证码";
-    }];
+    _leftTitleColor = leftTitleColor;
+    self.leftLabel.textColor = leftTitleColor;
 }
 
-- (void)stopCountDown {
-    [self.countDownButton stopCountDown];
+- (void)setLeftTitleFont:(UIFont *)leftTitleFont {
+    if (_leftTitleFont == leftTitleFont) {
+        return;
+    }
+    _leftTitleFont = leftTitleFont;
+    self.leftLabel.font = leftTitleFont;
 }
 
-- (void)setCountDownEnable:(BOOL)countDownEnable {
-    _countDownEnable = countDownEnable;
-    if (countDownEnable) {
-        self.countDownButton.backgroundColor = self.countDownBackgroundColor ?: [UIColor redColor];
+- (void)setLeftViewWidth:(CGFloat)leftViewWidth {
+    if (_leftViewWidth == leftViewWidth) {
+        return;
+    }
+    _leftViewWidth = leftViewWidth;
+    [self setNeedsLayout];
+}
+
+- (void)setRightViewWidth:(CGFloat)rightViewWidth {
+    if (_rightViewWidth == rightViewWidth) {
+        return;
+    }
+    _rightViewWidth = rightViewWidth;
+    [self setNeedsLayout];
+}
+
+- (void)setTextFieldInsets:(UIEdgeInsets)textFieldInsets {
+    _textFieldInsets = textFieldInsets;
+    [self setNeedsLayout];
+}
+
+- (void)setShowUnderLine:(BOOL)showUnderLine {
+    if (_showUnderLine == showUnderLine) {
+        return;
+    }
+    _showUnderLine = showUnderLine;
+    if (showUnderLine) {
+        [self addSubview:self.underLineView];
+        [self setNeedsLayout];
     } else {
-        self.countDownButton.backgroundColor = self.unable_countDownBackgroundColor ?: [UIColor redColor];
+        [self.underLineView removeFromSuperview];
     }
 }
 
-- (void)setCountDownBackgroundColor:(UIColor *)countDownBackgroundColor {
-    _countDownBackgroundColor = countDownBackgroundColor;
+- (void)setRightType:(HHTextFieldRightType)rightType {
+    if (_rightType == rightType) {
+        return;
+    }
+    _rightType = rightType;
+    
+    switch (rightType) {
+        case HHTextFieldRightTypePictureCode:
+        {
+            // 图形
+            [self addSubview:self.picCodeView];
+        }
+            break;
+        case HHTextFieldRightTypeVerificationCode:
+        {
+            // 验证码
+            [self addSubview:self.countDownButton];
+            self.countDownBeingTitlePrefix = @"剩余";
+            self.countDownBeingTitleSuffix = @"秒";
+            self.countDownTitle = @"获取验证码";
+        }
+            break;
+        case HHTextFieldRightTypeArrow:
+        {
+            // 箭头
+            NSString *path = [self getResourcePath:@"right_arrow"];
+            UIImage *image = [UIImage imageWithContentsOfFile:path];
+
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+            self.textField.rightView = imageView;
+            self.textField.rightViewMode = UITextFieldViewModeAlways;
+        }
+            break;
+        case HHTextFieldRightTypeSecure:
+        {
+            // 安全密码
+//            self.textField.rightView = self.secureButton;
+//            self.textField.rightViewMode = UITextFieldViewModeAlways;
+            self.textField.secureTextEntry = YES;
+            [self addSubview:self.secureButton];
+        }
+            break;
+        default:
+            break;
+    }
+    
+    [self setNeedsLayout];
+    
 }
 
-- (void)setUnable_countDownBackgroundColor:(UIColor *)unable_countDownBackgroundColor {
-    _unable_countDownBackgroundColor = unable_countDownBackgroundColor;
+- (void)setPictureCode:(UIImage *)image {
+    if (self.rightType == HHTextFieldRightTypePictureCode) {
+        [self.picCodeView setPictureCode:image];
+    }
 }
 
-- (void)setCountDownTitle:(NSString *)countDownTitle {
-    _countDownTitle = countDownTitle;
-    [self.countDownButton setTitle:countDownTitle?:@"获取验证码" forState:UIControlStateNormal];
-}
-
+/// Secure
 - (void)setSecureOpenImage:(UIImage *)secureOpenImage {
     _secureOpenImage = secureOpenImage;
     if (self.rightType == HHTextFieldRightTypeSecure && self.secureButton.selected == YES) {
@@ -313,15 +293,119 @@
     }
 }
 
-#pragma mark -
-
-- (void)setPictureCode:(UIImage *)image {
-    if (self.rightType == HHTextFieldRightTypePictureCode) {
-        [self.picCodeView setPictureCode:image];
+- (void)setCountDownEnable:(BOOL)countDownEnable {
+    if (self.countDownBeing) {
+        return;
+    }
+    _countDownEnable = countDownEnable;
+    self.countDownButton.enabled = countDownEnable;
+    if (countDownEnable) {
+        if (self.countDownBackgroundColor) {
+            self.countDownButton.backgroundColor = self.countDownBackgroundColor;
+        }
+        if (self.countDownTitleColor) {
+            [self.countDownButton setTitleColor:self.countDownTitleColor forState:UIControlStateNormal];
+        }
+    } else {
+        if (self.unable_countDownBackgroundColor) {
+            self.countDownButton.backgroundColor = self.unable_countDownBackgroundColor;
+        }
+        if (self.unable_countDownTitleColor) {
+            [self.countDownButton setTitleColor:self.unable_countDownTitleColor forState:UIControlStateNormal];
+        }
     }
 }
 
-#pragma mark -
+- (void)setCountDownBackgroundColor:(UIColor *)countDownBackgroundColor {
+    _countDownBackgroundColor = countDownBackgroundColor;
+    self.countDownButton.backgroundColor = self.countDownBackgroundColor;
+}
+
+- (void)setUnable_countDownBackgroundColor:(UIColor *)unable_countDownBackgroundColor {
+    _unable_countDownBackgroundColor = unable_countDownBackgroundColor;
+}
+
+- (void)setCountDownTitleColor:(UIColor *)countDownTitleColor {
+    _countDownTitleColor = countDownTitleColor;
+    [self.countDownButton setTitleColor:countDownTitleColor forState:UIControlStateNormal];
+}
+
+- (void)setUnable_countDownTitleColor:(UIColor *)unable_countDownTitleColor {
+    _unable_countDownTitleColor = unable_countDownTitleColor;
+}
+
+- (void)setCountDownTitleFont:(UIFont *)countDownTitleFont {
+    _countDownTitleFont = countDownTitleFont;
+    self.countDownButton.titleLabel.font = countDownTitleFont;
+}
+
+- (void)setCountDownBeingTitlePrefix:(NSString *)countDownBeingTitlePrefix {
+    _countDownBeingTitlePrefix = countDownBeingTitlePrefix;
+    self.countDownButton.beingTitlePrefix = countDownBeingTitlePrefix;
+}
+
+- (void)setCountDownBeingTitleSuffix:(NSString *)countDownBeingTitleSuffix {
+    _countDownBeingTitleSuffix = countDownBeingTitleSuffix;
+    self.countDownButton.beingTitleSuffix = countDownBeingTitleSuffix;
+}
+
+- (void)setCountDownTitle:(NSString *)countDownTitle {
+    _countDownTitle = countDownTitle;
+    [self.countDownButton setTitle:countDownTitle?:@"获取验证码" forState:UIControlStateNormal];
+    self.countDownButton.title = countDownTitle;
+}
+
+#pragma mark - CountDown
+
+- (void)startCountDown {
+    [self startCountDown:0];
+}
+
+- (void)startCountDown:(NSInteger)secound {
+    
+    if (secound <= 0) {
+        secound = 60;
+    }
+    
+    self.countDownEnable = NO;
+    self.countDownBeing = YES;
+    
+    // button type要 设置成custom 否则会闪动
+    [self.countDownButton startCountDownWithSecond:secound];
+    
+    __weak typeof(self) weakSelf = self;
+    self.countDownButton.countDownFinished = ^(HHCountDownButton * _Nonnull countDownButton, NSUInteger second) {
+        weakSelf.countDownBeing = NO;
+        weakSelf.countDownEnable = YES;
+    };
+}
+
+- (void)stopCountDown {
+    [self.countDownButton stopCountDown];
+}
+
+#pragma mark - Action
+
+/// 点击倒计时
+- (void)onClickCountDown:(HHCountDownButton *)sender {
+    if (self.verificationCodeViewCallBack) {
+        self.verificationCodeViewCallBack(self);
+    }
+}
+
+/// 点击安全密码
+- (void)onClickSecure:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    self.textField.secureTextEntry = !sender.selected;
+    
+    if (sender.selected) {
+        [sender setImage:[self imageWithSecureOpen] forState:UIControlStateNormal];
+    } else {
+        [sender setImage:[self imageWithSecureClose] forState:UIControlStateNormal];
+    }
+}
+
+#pragma mark - Lazy
 
 - (UILabel *)leftLabel {
     if (!_leftLabel) {
@@ -357,9 +441,7 @@
     if (!_countDownButton) {
         _countDownButton = [[HHCountDownButton alloc] init];
         _countDownButton.layer.cornerRadius = 5;
-        _countDownButton.backgroundColor = [UIColor redColor];
-        [_countDownButton setTitle:@"获取验证码" forState:UIControlStateNormal];
-
+        [_countDownButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_countDownButton addTarget:self action:@selector(onClickCountDown:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _countDownButton;

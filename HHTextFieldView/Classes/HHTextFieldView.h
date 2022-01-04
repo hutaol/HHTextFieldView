@@ -38,24 +38,38 @@ typedef void(^HHTextFieldViewClickCallBack)(HHTextFieldView *view);
 
 /// 右边显示类型
 @property (nonatomic, assign) HHTextFieldRightType rightType;
+/// 右边视图宽度
+@property (nonatomic, assign) CGFloat rightViewWidth;
 
-/// 输入框水平间距 默认：0
-@property (nonatomic, assign) CGFloat textFieldHorizontalMargin;
+/// 输入框边距 默认：0
+@property (nonatomic, assign) UIEdgeInsets textFieldInsets;
+@property (nonatomic, assign) UIEdgeInsets edgeInsets;
 
 /// 设置这个点击后 textField就不可编辑
 @property (nonatomic, copy) HHTextFieldViewClickCallBack onClickCallback;
 @property (nonatomic, copy) HHPictureCodeViewCallBack pictureCodeViewCallBack;
 @property (nonatomic, copy) HHVerificationCodeViewCallBack verificationCodeViewCallBack;
 
-// 默认red
+
+/// CountDown
 @property (nonatomic, strong) UIColor *countDownBackgroundColor;
 @property (nonatomic, strong) UIColor *unable_countDownBackgroundColor;
-@property (nonatomic, assign) BOOL countDownEnable;
+@property (nonatomic, strong) UIColor *countDownTitleColor;
+@property (nonatomic, strong) UIColor *unable_countDownTitleColor;
+@property (nonatomic, strong) UIFont *countDownTitleFont;
 @property (nonatomic, copy) NSString *countDownTitle;
+@property (nonatomic, copy) NSString *countDownBeingTitlePrefix;
+@property (nonatomic, copy) NSString *countDownBeingTitleSuffix;
+@property (nonatomic, assign) BOOL countDownEnable;
+@property (nonatomic, assign, readonly) BOOL countDownBeing;
+
 
 // Secure
 @property (nonatomic, strong) UIImage *secureOpenImage;
 @property (nonatomic, strong) UIImage *secureCloseImage;
+
+
+- (instancetype)initWithRightType:(HHTextFieldRightType)rightType;
 
 @end
 
