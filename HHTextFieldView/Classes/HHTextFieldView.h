@@ -35,6 +35,9 @@ typedef void(^HHTextFieldViewClickCallBack)(HHTextFieldView *view);
 
 /// 下划线是否展示
 @property (nonatomic, assign) BOOL showUnderLine;
+@property (nonatomic, strong) UIColor *underLineColor;
+/// 下划线是否充满 默认NO，和textField一样宽
+@property (nonatomic, assign) BOOL underLineFull;
 
 /// 右边显示类型
 @property (nonatomic, assign) HHTextFieldRightType rightType;

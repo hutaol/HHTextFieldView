@@ -156,7 +156,11 @@
     self.textField.frame = frame;
 
     if (self.showUnderLine) {
-        self.underLineView.frame = CGRectMake(0, frame.size.height - 0.5, showLeft ? frame.size.width + self.leftViewWidth : frame.size.width , 0.5);
+        if (self.underLineFull) {
+            self.underLineView.frame = CGRectMake(0, frame.size.height - 0.5, self.frame.size.width , 0.5);
+        } else {
+            self.underLineView.frame = CGRectMake(0, frame.size.height - 0.5, showLeft ? frame.size.width + self.leftViewWidth : frame.size.width , 0.5);
+        }
     }
 }
 
@@ -220,6 +224,16 @@
     } else {
         [self.underLineView removeFromSuperview];
     }
+}
+
+- (void)setUnderLineColor:(UIColor *)underLineColor {
+    _underLineColor = underLineColor;
+    self.underLineView.backgroundColor = underLineColor;
+}
+
+- (void)setUnderLineFull:(BOOL)underLineFull {
+    _underLineFull = underLineFull;
+    [self setNeedsLayout];
 }
 
 - (void)setRightType:(HHTextFieldRightType)rightType {
