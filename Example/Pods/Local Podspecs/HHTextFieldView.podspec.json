@@ -1,6 +1,6 @@
 {
   "name": "HHTextFieldView",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "summary": "A short description of HHTextFieldView.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hutaol/HHTextFieldView",
@@ -13,15 +13,11 @@
   },
   "source": {
     "git": "https://github.com/hutaol/HHTextFieldView.git",
-    "tag": "0.2.0"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "HHTextFieldView/Classes/**/*",
-  "resource_bundles": {
-    "HHTextFieldView": [
-      "HHTextFieldView/Assets/*.png"
-    ]
-  }
+  "source_files": "HHTextFieldView/Classes/*",
+  "resources": "HHTextFieldView/Assets/*"
 }

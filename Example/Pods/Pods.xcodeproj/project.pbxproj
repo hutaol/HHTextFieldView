@@ -7,58 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13C200B49193AFEC96FD6194E8B3C565 /* secure_open@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D736AA6424E30EF0B26A83CD76840A6 /* secure_open@3x.png */; };
-		13D84894FA50BEE5CCE400AC2CB95ECB /* secure_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1637FF810F837EB9C1CE4635B283778A /* secure_open@2x.png */; };
+		0580059BF6EB9F3790C5BE1766C1FE45 /* HHTextFieldView_secure_open@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A10E99315D37CC2BB2D459838C7282C /* HHTextFieldView_secure_open@3x.png */; };
+		0A0A88236E352F32197D938B59411E16 /* HHTextFieldView_arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABCFA797E8220B9FF1B9CCC0DF66A82 /* HHTextFieldView_arrow_right@2x.png */; };
+		161E4E69634677BE98119DF7F6DA12D1 /* HHCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C338BB8671EEAA76B053EA6B7FE780F /* HHCountDownButton.m */; };
 		1F84FE646CD1D7BAFFB58C243277AFF8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23F3EC1DBF19257EF49D8AF8A5070299 /* HHPictureCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A21B77F63E1058954468BC3D588FA /* HHPictureCodeView.m */; };
 		2975A09730FD83DC0897129A11EA6585 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
 		2B88C28DD20CBFA7B3AEB21A365197FE /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C4196413DE5BA121B4F0173173653D7 /* Pods-HHTextFieldView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C878C0F866C616E4C51EB57466B0BAED /* Pods-HHTextFieldView_Tests-dummy.m */; };
 		2CB61F6FA511CAACB43A50DC3A82E0DD /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
 		2ECCAC52EF4C74E1032E0BC646BBE5B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		30D475DF57C0C682A723231E7BCA0D14 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
+		32E7F282116B19EACF365889645E6C67 /* HHCountDownButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 7445A194974F08EB523A17CC2CD01BEC /* HHCountDownButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373413256658309F9053CE22BF62077E /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3B0DCD6E692C18A7536A1A4D46C715F9 /* Pods-HHTextFieldView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C39ADE73E8A8D7E2B073A5460EB17E1B /* Pods-HHTextFieldView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45206778DED703A90385E1F9C6235DDA /* HHCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E860501F634643A5328FF249C5509ED /* HHCountDownButton.m */; };
-		5381F62AA517351F717D516A5B3CE0FD /* HHTextFieldView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F61A427EB404C9A016FEF940987456 /* HHTextFieldView-dummy.m */; };
+		476ECE56466CBBE68752E5C270D99000 /* HHTextFieldView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A108A5FD866C15753C5DAC22C2A672 /* HHTextFieldView-dummy.m */; };
+		47B22C7EF78517A638D320CE4C80B82E /* HHTextFieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74ACC7CE969C828D4ED1B5F44EE0808D /* HHTextFieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		521D0C7D131218BC99038022E89A9889 /* HHTextFieldView_secure_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C8F21F63A56E482DCF81C7EB06FA80D /* HHTextFieldView_secure_open@2x.png */; };
 		5558B876B579BC1E79BD3D2B19148329 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		596AC0D3DB8A096C1516F8AE9A89F40C /* HHPictureCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B74DE9B2621CB345EECD24CF869A14C /* HHPictureCodeView.m */; };
 		5BE525FF6FA14B999ED2CCC0AA4FA0CF /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
-		5D41205C6CE856CE2B520E266DA89D46 /* HHTextFieldView-HHTextFieldView in Resources */ = {isa = PBXBuildFile; fileRef = 2A8EA8B403C6CFDC7047317A6D61DF3D /* HHTextFieldView-HHTextFieldView */; };
 		62E651A403A492ECA80F1704EE74CBFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		640CCE9C3A28AA3CA15510899F9140EE /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		64D09C5FA25C18FC134A42F9EB97CA3B /* HHPictureCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B386ED6A7A995CFC92942687B69E385 /* HHPictureCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65BE58F235DEC939380144CFCBF296B5 /* HHCountDownButton.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF6C7009D2B7F4BC292586DAD879D71 /* HHCountDownButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67F1963AA7C9EDB78127AD5F566A4949 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		6F18635FF4467084FDA4CB0EDA6EB321 /* HHTextFieldView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D28FCC5ACDD14ECF31FC46F05BC64C /* HHTextFieldView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6942B102B21924A9E259EBD22CA07A88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		74339C58AC4E5631FB8C0E662668A796 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
+		79710DF010977E2FBD08AF97CD11AF10 /* HHTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BD15B87333533FCD6D4E21629DB67B /* HHTextFieldView.m */; };
 		7C67CBD15D9B5D0B7769B2F469478332 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */; };
 		83E0123BCE117DF6D2085825F9970FDB /* Pods-HHTextFieldView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3264A48420943C7317D3053B7B661F3 /* Pods-HHTextFieldView_Example-dummy.m */; };
 		875A310EAF4D0C136C3FFFF5E0335BE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */; };
 		8AE19756F0126FE92AF625E36F3D70FE /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9C166EF4771B3A464A79CEA05DA2ADAE /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81192AB4D902B74260FD6FD132F5CCD1 /* right_arrow@2x.png */; };
+		90B50DB02246B89EBE077C655A422C0D /* HHTextFieldView_secure_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38852DE0502D29A955FA05305B5A8038 /* HHTextFieldView_secure_close@2x.png */; };
 		9C61022C472A0CB3359EBEF81024D54F /* Pods-HHTextFieldView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3752D6FB9CF929F4DCABACA913488718 /* Pods-HHTextFieldView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D3C5E2F56838937146191468A893244 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E658F388F01C72599CA75537950B6095 /* XCTest.framework */; };
-		B507CCDA1B3D584E160B6E66392F1036 /* HHTextFieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = A178433BAFB423384E2757ABF80376E3 /* HHTextFieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8C9D0246EF6C598D2B9F3197B5F33EC /* HHPictureCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A62D36FE945017650BE11A82770CF42 /* HHPictureCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B52281F9F4340D4FC8ABB2FEB1FEC08E /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
 		C390C6005353FB986CB52F474CEF8588 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
+		C870CE176D9EC125FE876D906A5CFDF2 /* HHTextFieldView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D30340A27E2FFBFC47805BC4B150D0 /* HHTextFieldView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9F76407497DF0205D7460B36D22259F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */; };
 		CA54C09A12400567AFFCB407EEB7E154 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
 		D10CF489EEA3BA730C3CA432AF92ACF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
-		D5601D7703B615C3776A9978809FB266 /* secure_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B6C888937701C89BC89D566931430A /* secure_close@3x.png */; };
-		D86847EAF589873884691A258D9DBB86 /* HHTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2EF41C8FE628F28A913EAA5584041 /* HHTextFieldView.m */; };
-		E0ECFD922FC8FD4054A4C4A5291BA25E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
-		F98B3C39F22AE55C2AF6A3347A72B9D8 /* secure_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A52BB882D3EA67EDD8FC305CA41DEE /* secure_close@2x.png */; };
+		E5E398150B16D9EBD94618B74CA51E01 /* HHTextFieldView_secure_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47CB3E215C8BC5826D912A02A9E7C7D4 /* HHTextFieldView_secure_close@3x.png */; };
 		FF8307B7346F4D3BA13C11AECFE6EDD0 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		103CB848915806E3F8A02EFFC29072CC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03795E089570E4FDD51ABB67CC6E5EF9;
-			remoteInfo = "HHTextFieldView-HHTextFieldView";
-		};
 		4BF5E080EFD9B4CE203F983C65E218E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -66,7 +58,7 @@
 			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
 			remoteInfo = FBSnapshotTestCase;
 		};
-		58CB84ADBACDD535FBDE118DBE0C1CA4 /* PBXContainerItemProxy */ = {
+		9CA81E22E118CDD01FF7DCD5BE01AD4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -83,85 +75,84 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		007337EA32CFB032BE1F5D70D2BC7CAA /* HHTextFieldView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HHTextFieldView.modulemap; sourceTree = "<group>"; };
-		05EF02142A4EC6F0EA8A11F9572ACE02 /* HHTextFieldView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HHTextFieldView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0B9FD023556CD01FB4EA3D6F4D8CA23E /* HHTextFieldView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHTextFieldView.debug.xcconfig; sourceTree = "<group>"; };
 		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		11F61A427EB404C9A016FEF940987456 /* HHTextFieldView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHTextFieldView-dummy.m"; sourceTree = "<group>"; };
-		14F9A6BE784D94516495BCA0768EBBBF /* HHTextFieldView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HHTextFieldView-Info.plist"; sourceTree = "<group>"; };
-		1637FF810F837EB9C1CE4635B283778A /* secure_open@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "secure_open@2x.png"; path = "HHTextFieldView/Assets/secure_open@2x.png"; sourceTree = "<group>"; };
 		16827C0A827945F1CBC2268EC1046474 /* Pods-HHTextFieldView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHTextFieldView_Tests-Info.plist"; sourceTree = "<group>"; };
 		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		21CCBF6AF29A5F8759B09083BBDF82A9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		2A8EA8B403C6CFDC7047317A6D61DF3D /* HHTextFieldView-HHTextFieldView */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "HHTextFieldView-HHTextFieldView"; path = HHTextFieldView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		30026EBEA2A6C6220D5B9CEE744E7EBB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2A62D36FE945017650BE11A82770CF42 /* HHPictureCodeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHPictureCodeView.h; path = HHTextFieldView/Classes/HHPictureCodeView.h; sourceTree = "<group>"; };
 		3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		366B086CE7412076276B6A8B63DA20B7 /* Pods-HHTextFieldView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHTextFieldView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3752D6FB9CF929F4DCABACA913488718 /* Pods-HHTextFieldView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HHTextFieldView_Example-umbrella.h"; sourceTree = "<group>"; };
+		38852DE0502D29A955FA05305B5A8038 /* HHTextFieldView_secure_close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "HHTextFieldView_secure_close@2x.png"; path = "HHTextFieldView/Assets/HHTextFieldView_secure_close@2x.png"; sourceTree = "<group>"; };
 		389145AD8E397FEC381FF0D8E481ADD7 /* Pods-HHTextFieldView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHTextFieldView_Tests.modulemap"; sourceTree = "<group>"; };
-		3ED2EF41C8FE628F28A913EAA5584041 /* HHTextFieldView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHTextFieldView.m; path = HHTextFieldView/Classes/HHTextFieldView.m; sourceTree = "<group>"; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		3F3FB603FC74973E18EE3141ECA988CA /* Pods-HHTextFieldView_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HHTextFieldView_Tests"; path = Pods_HHTextFieldView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		47CB3E215C8BC5826D912A02A9E7C7D4 /* HHTextFieldView_secure_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "HHTextFieldView_secure_close@3x.png"; path = "HHTextFieldView/Assets/HHTextFieldView_secure_close@3x.png"; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5B74DE9B2621CB345EECD24CF869A14C /* HHPictureCodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHPictureCodeView.m; path = HHTextFieldView/Classes/HHPictureCodeView.m; sourceTree = "<group>"; };
+		5C340C2550D1D3F551654A30D64DED34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D736AA6424E30EF0B26A83CD76840A6 /* secure_open@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "secure_open@3x.png"; path = "HHTextFieldView/Assets/secure_open@3x.png"; sourceTree = "<group>"; };
+		5C8F21F63A56E482DCF81C7EB06FA80D /* HHTextFieldView_secure_open@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "HHTextFieldView_secure_open@2x.png"; path = "HHTextFieldView/Assets/HHTextFieldView_secure_open@2x.png"; sourceTree = "<group>"; };
 		613B20BB6F6178D0FA0E14E21B8F83E7 /* Pods-HHTextFieldView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHTextFieldView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		671E25117AAE6A78FB78CBD302E1D0AA /* Pods-HHTextFieldView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHTextFieldView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6A10E99315D37CC2BB2D459838C7282C /* HHTextFieldView_secure_open@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "HHTextFieldView_secure_open@3x.png"; path = "HHTextFieldView/Assets/HHTextFieldView_secure_open@3x.png"; sourceTree = "<group>"; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		6E860501F634643A5328FF249C5509ED /* HHCountDownButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHCountDownButton.m; path = HHTextFieldView/Classes/HHCountDownButton.m; sourceTree = "<group>"; };
+		6ABCFA797E8220B9FF1B9CCC0DF66A82 /* HHTextFieldView_arrow_right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "HHTextFieldView_arrow_right@2x.png"; path = "HHTextFieldView/Assets/HHTextFieldView_arrow_right@2x.png"; sourceTree = "<group>"; };
+		6D05A43F8BE2DA6B43816A1AFB208BAC /* HHTextFieldView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHTextFieldView-prefix.pch"; sourceTree = "<group>"; };
 		707871698711DAFDC09D8D1DC3697B7F /* Pods-HHTextFieldView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHTextFieldView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		762C12FDC3BB78C2AAD0D3B53A7B3FB4 /* HHTextFieldView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHTextFieldView.release.xcconfig; sourceTree = "<group>"; };
-		7B386ED6A7A995CFC92942687B69E385 /* HHPictureCodeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHPictureCodeView.h; path = HHTextFieldView/Classes/HHPictureCodeView.h; sourceTree = "<group>"; };
+		7445A194974F08EB523A17CC2CD01BEC /* HHCountDownButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHCountDownButton.h; path = HHTextFieldView/Classes/HHCountDownButton.h; sourceTree = "<group>"; };
+		74ACC7CE969C828D4ED1B5F44EE0808D /* HHTextFieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHTextFieldView.h; path = HHTextFieldView/Classes/HHTextFieldView.h; sourceTree = "<group>"; };
 		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		80A52BB882D3EA67EDD8FC305CA41DEE /* secure_close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "secure_close@2x.png"; path = "HHTextFieldView/Assets/secure_close@2x.png"; sourceTree = "<group>"; };
 		80AF7100C29B40D46ADC174F82BF1100 /* Pods-HHTextFieldView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHTextFieldView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		81192AB4D902B74260FD6FD132F5CCD1 /* right_arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "right_arrow@2x.png"; path = "HHTextFieldView/Assets/right_arrow@2x.png"; sourceTree = "<group>"; };
 		82317D1E1CEFCFEB0589752F76035660 /* Pods-HHTextFieldView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHTextFieldView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		82D28FCC5ACDD14ECF31FC46F05BC64C /* HHTextFieldView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHTextFieldView-umbrella.h"; sourceTree = "<group>"; };
-		8551E87FE4B3205827AAB7081049CAF2 /* HHTextFieldView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHTextFieldView-prefix.pch"; sourceTree = "<group>"; };
 		88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		8C7D508A538A55081D2019C9B08367A2 /* Pods-HHTextFieldView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHTextFieldView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
 		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		9C338BB8671EEAA76B053EA6B7FE780F /* HHCountDownButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHCountDownButton.m; path = HHTextFieldView/Classes/HHCountDownButton.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A178433BAFB423384E2757ABF80376E3 /* HHTextFieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHTextFieldView.h; path = HHTextFieldView/Classes/HHTextFieldView.h; sourceTree = "<group>"; };
+		A0BD15B87333533FCD6D4E21629DB67B /* HHTextFieldView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHTextFieldView.m; path = HHTextFieldView/Classes/HHTextFieldView.m; sourceTree = "<group>"; };
+		A11E04E491B99B59CAE133F261A8FBC2 /* HHTextFieldView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HHTextFieldView.modulemap; sourceTree = "<group>"; };
 		A3264A48420943C7317D3053B7B661F3 /* Pods-HHTextFieldView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHTextFieldView_Example-dummy.m"; sourceTree = "<group>"; };
 		A8DCE6110BD2D8AF4EA8C1D127596B69 /* Pods-HHTextFieldView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHTextFieldView_Example-Info.plist"; sourceTree = "<group>"; };
-		ABF6C7009D2B7F4BC292586DAD879D71 /* HHCountDownButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHCountDownButton.h; path = HHTextFieldView/Classes/HHCountDownButton.h; sourceTree = "<group>"; };
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		B662BBA7AB78C8D0FD57EF7BE9E2736B /* Pods-HHTextFieldView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHTextFieldView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		B7352A19B9F3A25BFAA5842D1BD22D71 /* Pods-HHTextFieldView_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HHTextFieldView_Example"; path = Pods_HHTextFieldView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0B6C888937701C89BC89D566931430A /* secure_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "secure_close@3x.png"; path = "HHTextFieldView/Assets/secure_close@3x.png"; sourceTree = "<group>"; };
+		C00A21B77F63E1058954468BC3D588FA /* HHPictureCodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHPictureCodeView.m; path = HHTextFieldView/Classes/HHPictureCodeView.m; sourceTree = "<group>"; };
 		C39ADE73E8A8D7E2B073A5460EB17E1B /* Pods-HHTextFieldView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HHTextFieldView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C86D35A7C3E5817D57A29E84BD10B698 /* HHTextFieldView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HHTextFieldView-Info.plist"; sourceTree = "<group>"; };
 		C878C0F866C616E4C51EB57466B0BAED /* Pods-HHTextFieldView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHTextFieldView_Tests-dummy.m"; sourceTree = "<group>"; };
 		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		CC9198E14A7F81B53419C9D3A3B53E76 /* Pods-HHTextFieldView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHTextFieldView_Example.modulemap"; sourceTree = "<group>"; };
 		CD76572A520D03B962BFAD7218C13250 /* Pods-HHTextFieldView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHTextFieldView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D06C0FDFEA7FE57895C948DE2FD35ACA /* HHTextFieldView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HHTextFieldView; path = HHTextFieldView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		D759E1ABC576531B5275D9FBCD36E5F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D4D30340A27E2FFBFC47805BC4B150D0 /* HHTextFieldView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHTextFieldView-umbrella.h"; sourceTree = "<group>"; };
 		D7D354B5FC18095E521D0DCF1990CDFE /* Pods-HHTextFieldView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHTextFieldView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		D9582D750AFFB745FEE09D0B4E85A176 /* ResourceBundle-HHTextFieldView-HHTextFieldView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HHTextFieldView-HHTextFieldView-Info.plist"; sourceTree = "<group>"; };
-		E5D16B40447169B9CF4A53E5AB3034B2 /* HHTextFieldView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHTextFieldView.debug.xcconfig; sourceTree = "<group>"; };
+		D91B1F8329B1C7C6EA78C3D0F76AB3C7 /* HHTextFieldView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHTextFieldView.release.xcconfig; sourceTree = "<group>"; };
 		E658F388F01C72599CA75537950B6095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E6A108A5FD866C15753C5DAC22C2A672 /* HHTextFieldView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHTextFieldView-dummy.m"; sourceTree = "<group>"; };
+		F712B80C1EA69622A59AA967AA61B741 /* HHTextFieldView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HHTextFieldView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		26CCC8DF1D4441B31055418834E6565D /* Frameworks */ = {
+		01D027A1A0DB231CED25817518371D4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6942B102B21924A9E259EBD22CA07A88 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,14 +161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10CF489EEA3BA730C3CA432AF92ACF1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C1527955A3CD0E2711F52E14B12B9F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0ECFD922FC8FD4054A4C4A5291BA25E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +198,7 @@
 		16F2AC75D2134F5B49D91E903BF12333 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A206C7781BA26C1DA9A85ABEF752BAE5 /* HHTextFieldView */,
+				8EA36CD87FF12751DDAD88578D16450A /* HHTextFieldView */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -275,14 +258,25 @@
 			path = "Target Support Files/Pods-HHTextFieldView_Tests";
 			sourceTree = "<group>";
 		};
-		870DF923F52B18D389DA90A39FD5792F /* Pod */ = {
+		8EA36CD87FF12751DDAD88578D16450A /* HHTextFieldView */ = {
 			isa = PBXGroup;
 			children = (
-				05EF02142A4EC6F0EA8A11F9572ACE02 /* HHTextFieldView.podspec */,
-				30026EBEA2A6C6220D5B9CEE744E7EBB /* LICENSE */,
-				D759E1ABC576531B5275D9FBCD36E5F2 /* README.md */,
+				7445A194974F08EB523A17CC2CD01BEC /* HHCountDownButton.h */,
+				9C338BB8671EEAA76B053EA6B7FE780F /* HHCountDownButton.m */,
+				2A62D36FE945017650BE11A82770CF42 /* HHPictureCodeView.h */,
+				C00A21B77F63E1058954468BC3D588FA /* HHPictureCodeView.m */,
+				74ACC7CE969C828D4ED1B5F44EE0808D /* HHTextFieldView.h */,
+				A0BD15B87333533FCD6D4E21629DB67B /* HHTextFieldView.m */,
+				6ABCFA797E8220B9FF1B9CCC0DF66A82 /* HHTextFieldView_arrow_right@2x.png */,
+				38852DE0502D29A955FA05305B5A8038 /* HHTextFieldView_secure_close@2x.png */,
+				47CB3E215C8BC5826D912A02A9E7C7D4 /* HHTextFieldView_secure_close@3x.png */,
+				5C8F21F63A56E482DCF81C7EB06FA80D /* HHTextFieldView_secure_open@2x.png */,
+				6A10E99315D37CC2BB2D459838C7282C /* HHTextFieldView_secure_open@3x.png */,
+				AD5DD63975B792976620D1F086EBACAA /* Pod */,
+				E06B6D39F8FA81564B74B335153E734A /* Support Files */,
 			);
-			name = Pod;
+			name = HHTextFieldView;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */ = {
@@ -293,37 +287,14 @@
 			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
-		A206C7781BA26C1DA9A85ABEF752BAE5 /* HHTextFieldView */ = {
+		AD5DD63975B792976620D1F086EBACAA /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				ABF6C7009D2B7F4BC292586DAD879D71 /* HHCountDownButton.h */,
-				6E860501F634643A5328FF249C5509ED /* HHCountDownButton.m */,
-				7B386ED6A7A995CFC92942687B69E385 /* HHPictureCodeView.h */,
-				5B74DE9B2621CB345EECD24CF869A14C /* HHPictureCodeView.m */,
-				A178433BAFB423384E2757ABF80376E3 /* HHTextFieldView.h */,
-				3ED2EF41C8FE628F28A913EAA5584041 /* HHTextFieldView.m */,
-				81192AB4D902B74260FD6FD132F5CCD1 /* right_arrow@2x.png */,
-				80A52BB882D3EA67EDD8FC305CA41DEE /* secure_close@2x.png */,
-				C0B6C888937701C89BC89D566931430A /* secure_close@3x.png */,
-				1637FF810F837EB9C1CE4635B283778A /* secure_open@2x.png */,
-				5D736AA6424E30EF0B26A83CD76840A6 /* secure_open@3x.png */,
-				870DF923F52B18D389DA90A39FD5792F /* Pod */,
-				D67118D618B113DEA96D0727A0F5899A /* Support Files */,
+				F712B80C1EA69622A59AA967AA61B741 /* HHTextFieldView.podspec */,
+				5C340C2550D1D3F551654A30D64DED34 /* LICENSE */,
+				21CCBF6AF29A5F8759B09083BBDF82A9 /* README.md */,
 			);
-			name = HHTextFieldView;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		ADEECB6746DE36AB880A6F758783A994 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */,
-				D06C0FDFEA7FE57895C948DE2FD35ACA /* HHTextFieldView */,
-				2A8EA8B403C6CFDC7047317A6D61DF3D /* HHTextFieldView-HHTextFieldView */,
-				B7352A19B9F3A25BFAA5842D1BD22D71 /* Pods-HHTextFieldView_Example */,
-				3F3FB603FC74973E18EE3141ECA988CA /* Pods-HHTextFieldView_Tests */,
-			);
-			name = Products;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */ = {
@@ -367,22 +338,21 @@
 				16F2AC75D2134F5B49D91E903BF12333 /* Development Pods */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				E81A37DBDE41E671312C56736544E2FA /* Pods */,
-				ADEECB6746DE36AB880A6F758783A994 /* Products */,
+				F62F6367E90479F14492EA528E233FC5 /* Products */,
 				06EC4D1BBC8E431F31BC24F0091BA62C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D67118D618B113DEA96D0727A0F5899A /* Support Files */ = {
+		E06B6D39F8FA81564B74B335153E734A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				007337EA32CFB032BE1F5D70D2BC7CAA /* HHTextFieldView.modulemap */,
-				11F61A427EB404C9A016FEF940987456 /* HHTextFieldView-dummy.m */,
-				14F9A6BE784D94516495BCA0768EBBBF /* HHTextFieldView-Info.plist */,
-				8551E87FE4B3205827AAB7081049CAF2 /* HHTextFieldView-prefix.pch */,
-				82D28FCC5ACDD14ECF31FC46F05BC64C /* HHTextFieldView-umbrella.h */,
-				E5D16B40447169B9CF4A53E5AB3034B2 /* HHTextFieldView.debug.xcconfig */,
-				762C12FDC3BB78C2AAD0D3B53A7B3FB4 /* HHTextFieldView.release.xcconfig */,
-				D9582D750AFFB745FEE09D0B4E85A176 /* ResourceBundle-HHTextFieldView-HHTextFieldView-Info.plist */,
+				A11E04E491B99B59CAE133F261A8FBC2 /* HHTextFieldView.modulemap */,
+				E6A108A5FD866C15753C5DAC22C2A672 /* HHTextFieldView-dummy.m */,
+				C86D35A7C3E5817D57A29E84BD10B698 /* HHTextFieldView-Info.plist */,
+				6D05A43F8BE2DA6B43816A1AFB208BAC /* HHTextFieldView-prefix.pch */,
+				D4D30340A27E2FFBFC47805BC4B150D0 /* HHTextFieldView-umbrella.h */,
+				0B9FD023556CD01FB4EA3D6F4D8CA23E /* HHTextFieldView.debug.xcconfig */,
+				D91B1F8329B1C7C6EA78C3D0F76AB3C7 /* HHTextFieldView.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/HHTextFieldView";
@@ -394,6 +364,17 @@
 				BD2D60DE56CBB8C87BA07E0C1CCD0592 /* FBSnapshotTestCase */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F62F6367E90479F14492EA528E233FC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */,
+				D06C0FDFEA7FE57895C948DE2FD35ACA /* HHTextFieldView */,
+				B7352A19B9F3A25BFAA5842D1BD22D71 /* Pods-HHTextFieldView_Example */,
+				3F3FB603FC74973E18EE3141ECA988CA /* Pods-HHTextFieldView_Tests */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FB2668559AE577E6E8078C0C291AD417 /* iOS */ = {
@@ -410,6 +391,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		865A236841FC24858DDA52964E2579FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E7F282116B19EACF365889645E6C67 /* HHCountDownButton.h in Headers */,
+				A8C9D0246EF6C598D2B9F3197B5F33EC /* HHPictureCodeView.h in Headers */,
+				47B22C7EF78517A638D320CE4C80B82E /* HHTextFieldView.h in Headers */,
+				C870CE176D9EC125FE876D906A5CFDF2 /* HHTextFieldView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4CF7A53AFE8275DDE075747E8245F97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,17 +414,6 @@
 				8AE19756F0126FE92AF625E36F3D70FE /* UIImage+Compare.h in Headers */,
 				67F1963AA7C9EDB78127AD5F566A4949 /* UIImage+Diff.h in Headers */,
 				373413256658309F9053CE22BF62077E /* UIImage+Snapshot.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7AF0DA892D113E616CE8AD3E2AB778F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65BE58F235DEC939380144CFCBF296B5 /* HHCountDownButton.h in Headers */,
-				64D09C5FA25C18FC134A42F9EB97CA3B /* HHPictureCodeView.h in Headers */,
-				B507CCDA1B3D584E160B6E66392F1036 /* HHTextFieldView.h in Headers */,
-				6F18635FF4467084FDA4CB0EDA6EB321 /* HHTextFieldView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,23 +436,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		03795E089570E4FDD51ABB67CC6E5EF9 /* HHTextFieldView-HHTextFieldView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C5503B252C04E8DF266F7B5D9F20C88A /* Build configuration list for PBXNativeTarget "HHTextFieldView-HHTextFieldView" */;
-			buildPhases = (
-				2059A4452478C83CE6F50EDF539E3E29 /* Sources */,
-				26CCC8DF1D4441B31055418834E6565D /* Frameworks */,
-				D4159D41BB6CB877631B249505C6D412 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HHTextFieldView-HHTextFieldView";
-			productName = HHTextFieldView;
-			productReference = 2A8EA8B403C6CFDC7047317A6D61DF3D /* HHTextFieldView-HHTextFieldView */;
-			productType = "com.apple.product-type.bundle";
-		};
 		7A408D190C1C3AA5960CFDEC2BBC40E4 /* Pods-HHTextFieldView_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E631D7BE1523F164591CF8831C809C7A /* Build configuration list for PBXNativeTarget "Pods-HHTextFieldView_Tests" */;
@@ -485,7 +449,7 @@
 			);
 			dependencies = (
 				95E273367F3F730623529D5A406C7F5F /* PBXTargetDependency */,
-				6D1AC1677EE643CA5476429A7E253A70 /* PBXTargetDependency */,
+				C051741678E298D4779C8D1E623F250D /* PBXTargetDependency */,
 			);
 			name = "Pods-HHTextFieldView_Tests";
 			productName = Pods_HHTextFieldView_Tests;
@@ -512,17 +476,16 @@
 		};
 		BFC06649E042EBDE740F1FD6890781B4 /* HHTextFieldView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FEC6A536F7D2385FF9DA543401BE46C3 /* Build configuration list for PBXNativeTarget "HHTextFieldView" */;
+			buildConfigurationList = 845DF9A2D0861A2C764FE1F48F339C67 /* Build configuration list for PBXNativeTarget "HHTextFieldView" */;
 			buildPhases = (
-				D7AF0DA892D113E616CE8AD3E2AB778F /* Headers */,
-				735AB08B70A37A0DEC6BBE15566D527F /* Sources */,
-				9C1527955A3CD0E2711F52E14B12B9F1 /* Frameworks */,
-				E9D98A56D14D69176E721F057A1E9D73 /* Resources */,
+				865A236841FC24858DDA52964E2579FD /* Headers */,
+				FDFA363C4AF00E0BC344229031A289ED /* Sources */,
+				01D027A1A0DB231CED25817518371D4C /* Frameworks */,
+				23CCA315FFC85FECD05FD72B608084C9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0A48CA1D965948BD9BD8722CF5A51E34 /* PBXTargetDependency */,
 			);
 			name = HHTextFieldView;
 			productName = HHTextFieldView;
@@ -566,13 +529,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = ADEECB6746DE36AB880A6F758783A994 /* Products */;
+			productRefGroup = F62F6367E90479F14492EA528E233FC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */,
 				BFC06649E042EBDE740F1FD6890781B4 /* HHTextFieldView */,
-				03795E089570E4FDD51ABB67CC6E5EF9 /* HHTextFieldView-HHTextFieldView */,
 				C0C31E1464C1CF1A68DC5E12C79A09E3 /* Pods-HHTextFieldView_Example */,
 				7A408D190C1C3AA5960CFDEC2BBC40E4 /* Pods-HHTextFieldView_Tests */,
 			);
@@ -594,15 +556,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4159D41BB6CB877631B249505C6D412 /* Resources */ = {
+		23CCA315FFC85FECD05FD72B608084C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C166EF4771B3A464A79CEA05DA2ADAE /* right_arrow@2x.png in Resources */,
-				F98B3C39F22AE55C2AF6A3347A72B9D8 /* secure_close@2x.png in Resources */,
-				D5601D7703B615C3776A9978809FB266 /* secure_close@3x.png in Resources */,
-				13D84894FA50BEE5CCE400AC2CB95ECB /* secure_open@2x.png in Resources */,
-				13C200B49193AFEC96FD6194E8B3C565 /* secure_open@3x.png in Resources */,
+				0A0A88236E352F32197D938B59411E16 /* HHTextFieldView_arrow_right@2x.png in Resources */,
+				90B50DB02246B89EBE077C655A422C0D /* HHTextFieldView_secure_close@2x.png in Resources */,
+				E5E398150B16D9EBD94618B74CA51E01 /* HHTextFieldView_secure_close@3x.png in Resources */,
+				521D0C7D131218BC99038022E89A9889 /* HHTextFieldView_secure_open@2x.png in Resources */,
+				0580059BF6EB9F3790C5BE1766C1FE45 /* HHTextFieldView_secure_open@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,35 +575,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9D98A56D14D69176E721F057A1E9D73 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5D41205C6CE856CE2B520E266DA89D46 /* HHTextFieldView-HHTextFieldView in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2059A4452478C83CE6F50EDF539E3E29 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		735AB08B70A37A0DEC6BBE15566D527F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45206778DED703A90385E1F9C6235DDA /* HHCountDownButton.m in Sources */,
-				596AC0D3DB8A096C1516F8AE9A89F40C /* HHPictureCodeView.m in Sources */,
-				D86847EAF589873884691A258D9DBB86 /* HHTextFieldView.m in Sources */,
-				5381F62AA517351F717D516A5B3CE0FD /* HHTextFieldView-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		94E3764327794E6F66260AF13DCAD91D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -674,21 +610,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFA363C4AF00E0BC344229031A289ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				161E4E69634677BE98119DF7F6DA12D1 /* HHCountDownButton.m in Sources */,
+				23F3EC1DBF19257EF49D8AF8A5070299 /* HHPictureCodeView.m in Sources */,
+				79710DF010977E2FBD08AF97CD11AF10 /* HHTextFieldView.m in Sources */,
+				476ECE56466CBBE68752E5C270D99000 /* HHTextFieldView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0A48CA1D965948BD9BD8722CF5A51E34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "HHTextFieldView-HHTextFieldView";
-			target = 03795E089570E4FDD51ABB67CC6E5EF9 /* HHTextFieldView-HHTextFieldView */;
-			targetProxy = 103CB848915806E3F8A02EFFC29072CC /* PBXContainerItemProxy */;
-		};
-		6D1AC1677EE643CA5476429A7E253A70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-HHTextFieldView_Example";
-			target = C0C31E1464C1CF1A68DC5E12C79A09E3 /* Pods-HHTextFieldView_Example */;
-			targetProxy = 58CB84ADBACDD535FBDE118DBE0C1CA4 /* PBXContainerItemProxy */;
-		};
 		822E8F8FF8D111C23DEA919C84B09C3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HHTextFieldView;
@@ -700,6 +635,12 @@
 			name = FBSnapshotTestCase;
 			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
 			targetProxy = 4BF5E080EFD9B4CE203F983C65E218E5 /* PBXContainerItemProxy */;
+		};
+		C051741678E298D4779C8D1E623F250D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HHTextFieldView_Example";
+			target = C0C31E1464C1CF1A68DC5E12C79A09E3 /* Pods-HHTextFieldView_Example */;
+			targetProxy = 9CA81E22E118CDD01FF7DCD5BE01AD4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -767,21 +708,66 @@
 			};
 			name = Debug;
 		};
-		562BEBF6538B836D6DB62810CD788315 /* Debug */ = {
+		1A47D45E37630CA14D9C512F19E5C52A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5D16B40447169B9CF4A53E5AB3034B2 /* HHTextFieldView.debug.xcconfig */;
+			baseConfigurationReference = 0B9FD023556CD01FB4EA3D6F4D8CA23E /* HHTextFieldView.debug.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HHTextFieldView";
-				IBSC_MODULE = HHTextFieldView;
-				INFOPLIST_FILE = "Target Support Files/HHTextFieldView/ResourceBundle-HHTextFieldView-HHTextFieldView-Info.plist";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HHTextFieldView/HHTextFieldView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView.modulemap";
+				PRODUCT_MODULE_NAME = HHTextFieldView;
 				PRODUCT_NAME = HHTextFieldView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		253F22163D9A42751AA5352F3E629B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91B1F8329B1C7C6EA78C3D0F76AB3C7 /* HHTextFieldView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HHTextFieldView/HHTextFieldView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView.modulemap";
+				PRODUCT_MODULE_NAME = HHTextFieldView;
+				PRODUCT_NAME = HHTextFieldView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		665A137081732B04D7E21D67BFBDD721 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -878,36 +864,6 @@
 			};
 			name = Release;
 		};
-		6F3E9D132CDB4B421C3197937E8044F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5D16B40447169B9CF4A53E5AB3034B2 /* HHTextFieldView.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HHTextFieldView/HHTextFieldView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView.modulemap";
-				PRODUCT_MODULE_NAME = HHTextFieldView;
-				PRODUCT_NAME = HHTextFieldView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		6F4DCCC334F4CA89352E6E494BE07382 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD76572A520D03B962BFAD7218C13250 /* Pods-HHTextFieldView_Example.release.xcconfig */;
@@ -970,53 +926,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		8EDB1D50CE771F3489E9D134A02E7F54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 762C12FDC3BB78C2AAD0D3B53A7B3FB4 /* HHTextFieldView.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HHTextFieldView/HHTextFieldView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HHTextFieldView/HHTextFieldView.modulemap";
-				PRODUCT_MODULE_NAME = HHTextFieldView;
-				PRODUCT_NAME = HHTextFieldView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BB21FE375FD30DE46E1A886353D79DED /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 762C12FDC3BB78C2AAD0D3B53A7B3FB4 /* HHTextFieldView.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HHTextFieldView";
-				IBSC_MODULE = HHTextFieldView;
-				INFOPLIST_FILE = "Target Support Files/HHTextFieldView/ResourceBundle-HHTextFieldView-HHTextFieldView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = HHTextFieldView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 		E4D0D44B090D4284607EBBC4E71A96C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1137,6 +1046,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		845DF9A2D0861A2C764FE1F48F339C67 /* Build configuration list for PBXNativeTarget "HHTextFieldView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A47D45E37630CA14D9C512F19E5C52A /* Debug */,
+				253F22163D9A42751AA5352F3E629B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9AFB083BD5F899744F1BD7AEE2932F50 /* Build configuration list for PBXNativeTarget "Pods-HHTextFieldView_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1146,29 +1064,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C5503B252C04E8DF266F7B5D9F20C88A /* Build configuration list for PBXNativeTarget "HHTextFieldView-HHTextFieldView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				562BEBF6538B836D6DB62810CD788315 /* Debug */,
-				BB21FE375FD30DE46E1A886353D79DED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E631D7BE1523F164591CF8831C809C7A /* Build configuration list for PBXNativeTarget "Pods-HHTextFieldView_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16F4403D285AC4FB341E292938177542 /* Debug */,
 				665A137081732B04D7E21D67BFBDD721 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FEC6A536F7D2385FF9DA543401BE46C3 /* Build configuration list for PBXNativeTarget "HHTextFieldView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6F3E9D132CDB4B421C3197937E8044F0 /* Debug */,
-				8EDB1D50CE771F3489E9D134A02E7F54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

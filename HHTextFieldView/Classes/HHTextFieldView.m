@@ -48,26 +48,17 @@
 }
 
 - (UIImage *)imageWithSecureOpen {
-    return self.secureOpenImage ?: [UIImage imageWithContentsOfFile:[self getResourcePath:@"secure_open"]];
+    return self.secureOpenImage ?: [self imageWithName:@"HHTextFieldView_secure_open"];
 }
 
 - (UIImage *)imageWithSecureClose {
-    return self.secureCloseImage ?: [UIImage imageWithContentsOfFile:[self getResourcePath:@"secure_close"]];
+    return self.secureCloseImage ?: [self imageWithName:@"HHTextFieldView_secure_close"];
 }
 
-- (NSBundle *)getResourceBundle:(NSString *)bundleName {
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    NSURL *bundleURL = [bundle URLForResource:bundleName withExtension:@"bundle"];
-    NSBundle *resourceBundle = [NSBundle bundleWithURL:bundleURL];
-    if (!resourceBundle) {
-        NSString * bundlePath = [bundle.resourcePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.bundle", bundleName]];
-        resourceBundle = [NSBundle bundleWithPath:bundlePath];
-    }
-    return resourceBundle ?: bundle;
-}
-
-- (NSString *)getResourcePath:(NSString *)name {
-    return [[[self getResourceBundle:@"HHTextFieldView"] resourcePath] stringByAppendingPathComponent:name];
+- (UIImage *)imageWithName:(NSString *)name {
+     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    UIImage *image = [UIImage imageWithContentsOfFile:[[bundle resourcePath] stringByAppendingPathComponent:name]];
+    return image;
 }
 
 - (void)setOnClickCallback:(HHTextFieldViewClickCallBack)onClickCallback {
@@ -261,8 +252,7 @@
         case HHTextFieldRightTypeArrow:
         {
             // 箭头
-            NSString *path = [self getResourcePath:@"right_arrow"];
-            UIImage *image = [UIImage imageWithContentsOfFile:path];
+            UIImage *image = [self imageWithName:@"HHTextFieldView_arrow_right"];
 
             UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
             self.textField.rightView = imageView;
